@@ -48,12 +48,10 @@ class CategoriesVC: UIViewController {
         
     }
     
-    private func goRecipes(_ category: Category) {
+    private func goRecipes(_ arrRecipe: [Recipe]) {
         let RecipeCategory = RecipeListVC()
-//        let navigationController = UINavigationController(rootViewController: RecipeCategory)
         navigationController?.pushViewController(RecipeCategory, animated: true)
-//        navigationController.modalTransitionStyle = .crossDissolve
-//        present(navigationController, animated: true, completion: nil)
+
     }
     
     //    internal func getPostAlamofire(){
@@ -99,7 +97,7 @@ extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
     }
     // Que pasa cuando seleccionamos una de las filas
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      goRecipes(self.categories[indexPath.row])
+      goRecipes(self.categories[indexPath.row].Recipes)
         
     }
     

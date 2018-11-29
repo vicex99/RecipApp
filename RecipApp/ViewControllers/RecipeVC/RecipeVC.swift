@@ -10,6 +10,11 @@ import UIKit
 
 class RecipeVC: UIViewController {
 
+    @IBOutlet var txtTitle: UILabel?
+    @IBOutlet var imgStart: UIImageView?
+    @IBOutlet var ingredientsTable: UITableView?
+    @IBOutlet var doneTable: UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

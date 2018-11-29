@@ -14,9 +14,9 @@ class Recipe {
     var backgoundImg : String!
     var description : String!
     
-    var ingredients: [String]!
+    var ingredients: [String]! = ["ajo", "cebolla", "piña", "pimiento"]
     
-    var elaboracionPasos: [String]!
+    var elaboracionPasos: [String]! = ["primero cebolla", "despues pimiento y ajo", "para terminar la piña"]
     
     //TODO: añadir resto elementos
     init(name: String, backgoundImg: String, description: String){
