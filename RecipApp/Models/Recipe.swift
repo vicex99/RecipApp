@@ -13,15 +13,24 @@ class Recipe {
     var name : String!
     var backgoundImg : String!
     var description : String!
+    var duration : String!
+    var dificult : String!
     
     var ingredients: [String]! = ["ajo", "cebolla", "piña", "pimiento"]
+    var elaboration: [String]! = ["primero cebolla", "despues pimiento y ajo", "para terminar la piña"]
     
-    var elaboracionPasos: [String]! = ["primero cebolla", "despues pimiento y ajo", "para terminar la piña"]
+    var coordenades: Location!
+    
     
     //TODO: añadir resto elementos
-    init(name: String, backgoundImg: String, description: String){
+    init(name: String, backgoundImg: String, description: String, ingredients: [String], elaboration: [String], duration: String, dificult: String, location: Location){
         self.name = name
         self.backgoundImg = backgoundImg
         self.description = description
+        self.ingredients = ingredients
+        self.elaboration = elaboration
+        self.duration = duration
+        self.dificult = dificult
+        self.coordenades = location
     }
 }

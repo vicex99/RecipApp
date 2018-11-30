@@ -10,40 +10,66 @@ import UIKit
 
 class RecipeVC: UIViewController {
 
-    @IBOutlet var txtTitle: UILabel?
-    @IBOutlet var imgStart: UIImageView?
-//    @IBOutlet var ingredientsTable: UITableView?
-//    @IBOutlet var doneTable: UITableView?
+    @IBOutlet var txtTitle: UITextView!
+    @IBOutlet var imgStart: UIImageView!
+    @IBOutlet var txtIngredients: UITextView!
+    @IBOutlet var txtSteps: UITextView!
+
+    @IBOutlet var lblDifficult: UILabel!
+    @IBOutlet var lblTime: UILabel!
+    @IBOutlet var btnLocation: UIButton!
     
     internal var recipe: Recipe!
     
-    convenience init(recipe: Recipe){
+    convenience init(_ recipe: Recipe){
         self.init()
         self.recipe = recipe
-//        txtTitle = recipe.name
-//        txt
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        txtTitle.text = recipe.name
+        lblTime.text = recipe.duration
+        lblDifficult.text = recipe.dificult
+        setIngredients()
+        setProgress()
+        imgStart.sd_setImage(with: URL(string: recipe.backgoundImg!), placeholderImage: UIImage(named: "Recipe"), options: .cacheMemoryOnly, completed: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+ 
+    internal func setIngredients(){
+        var allingredients: String = ""
+        for ingr in recipe.ingredients {
+            allingredients = allingredients + "\n " +  ingr
+        }
+        
+        self.txtIngredients.text = allingredients
+        
+        self.txtIngredients.translatesAutoresizingMaskIntoConstraints = true
+        self.txtIngredients.sizeToFit()
+        self.txtIngredients.isScrollEnabled = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    internal func setProgress(){
+        var allProgres: String = ""
+        for step in recipe.elaboration {
+            allProgres = allProgres + "\n " +  step
+        }
+        
+        self.txtIngredients.text = allProgres
+        
+        self.txtIngredients.translatesAutoresizingMaskIntoConstraints = true
+        self.txtIngredients.sizeToFit()
+        self.txtIngredients.isScrollEnabled = false
     }
-    */
-
+    
+    @IBAction internal func toMap(){
+        let RecipeMap = MapViewController(recipe.coordenades.lat, recipe.coordenades.lon)
+        navigationController?.pushViewController(RecipeMap, animated: true)
+    }
 }

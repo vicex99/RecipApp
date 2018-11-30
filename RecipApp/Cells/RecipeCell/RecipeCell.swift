@@ -11,8 +11,9 @@ import UIKit
 class RecipeCell: UITableViewCell {
     
     @IBOutlet var imgRecipe: UIImageView!
-    @IBOutlet var lblName: UILabel!
+    @IBOutlet var txtName: UITextView!
     @IBOutlet var txtfDescription: UITextView!
+    @IBOutlet var txtDificult: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

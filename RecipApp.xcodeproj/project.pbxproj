@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9E3C5F9B2D730723C80B39CE /* Pods_RecipApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AEA87D1ED254DFB186B295 /* Pods_RecipApp.framework */; };
-		C30C7E6621B1276B00F75729 /* BBDDLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C7E6521B1276B00F75729 /* BBDDLocal.swift */; };
 		C365047E21ABE5020020E8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365047D21ABE5020020E8FA /* AppDelegate.swift */; };
 		C365048521ABE5040020E8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C365048421ABE5040020E8FA /* Assets.xcassets */; };
 		C365049921ABEBF30020E8FA /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365049721ABEBF30020E8FA /* CategoriesVC.swift */; };
@@ -25,13 +24,13 @@
 		C36504B621AC09370020E8FA /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36504B421AC09360020E8FA /* RecipeCell.xib */; };
 		C36504B921AC09760020E8FA /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36504B721AC09760020E8FA /* CategoryCell.swift */; };
 		C36504BA21AC09760020E8FA /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36504B821AC09760020E8FA /* CategoryCell.xib */; };
+		C3E68AEA21B19E5400D001CD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E68AE921B19E5400D001CD /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DE5CCDEFE60FD4DBC829D73 /* Pods-RecipApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipApp/Pods-RecipApp.release.xcconfig"; sourceTree = "<group>"; };
 		87AEA87D1ED254DFB186B295 /* Pods_RecipApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2D15CA1CB91CA379752087 /* Pods-RecipApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipApp/Pods-RecipApp.debug.xcconfig"; sourceTree = "<group>"; };
-		C30C7E6521B1276B00F75729 /* BBDDLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBDDLocal.swift; sourceTree = "<group>"; };
 		C365047A21ABE5020020E8FA /* RecipApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C365047D21ABE5020020E8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C365048421ABE5040020E8FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		C36504B421AC09360020E8FA /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		C36504B721AC09760020E8FA /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		C36504B821AC09760020E8FA /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		C3E68AE921B19E5400D001CD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,6 @@
 		C365048F21ABE5550020E8FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3A24C2121B0818100FA5C0F /* New Group */,
 				C365049621ABE72C0020E8FA /* OriginMapVC */,
 				C365049521ABE6D40020E8FA /* RecipeVC */,
 				C365049421ABE6880020E8FA /* RecipeListVC */,
@@ -120,7 +119,7 @@
 			children = (
 				C36504A921ABF2060020E8FA /* Recipe.swift */,
 				C36504AB21ABF2360020E8FA /* Category.swift */,
-				C30C7E6521B1276B00F75729 /* BBDDLocal.swift */,
+				C3E68AE921B19E5400D001CD /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,13 +185,6 @@
 				C36504B421AC09360020E8FA /* RecipeCell.xib */,
 			);
 			path = RecipeCell;
-			sourceTree = "<group>";
-		};
-		C3A24C2121B0818100FA5C0F /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CCD58C7A9D1AB5F27EE79F57 /* Pods */ = {
@@ -324,12 +316,12 @@
 			files = (
 				C365049D21ABED0D0020E8FA /* RecipeListVC.swift in Sources */,
 				C365049921ABEBF30020E8FA /* CategoriesVC.swift in Sources */,
+				C3E68AEA21B19E5400D001CD /* Location.swift in Sources */,
 				C36504AA21ABF2060020E8FA /* Recipe.swift in Sources */,
 				C36504B521AC09360020E8FA /* RecipeCell.swift in Sources */,
 				C36504A121ABED750020E8FA /* RecipeVC.swift in Sources */,
 				C36504B921AC09760020E8FA /* CategoryCell.swift in Sources */,
 				C36504A521ABEDBB0020E8FA /* MapViewController.swift in Sources */,
-				C30C7E6621B1276B00F75729 /* BBDDLocal.swift in Sources */,
 				C365047E21ABE5020020E8FA /* AppDelegate.swift in Sources */,
 				C36504AC21ABF2360020E8FA /* Category.swift in Sources */,
 			);

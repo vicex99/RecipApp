@@ -20,7 +20,7 @@ class RecipeListVC: UIViewController {
     
     internal var filteredRecipes : [Recipe] = []
     
-    convenience init(recipes: [Recipe]){
+    convenience init(_ recipes: [Recipe]){
         self.init()
         self.recipes = recipes
     }
@@ -29,7 +29,6 @@ class RecipeListVC: UIViewController {
         super.viewDidLoad()
         
         title = "Recetas"
-        addContent()
         setCategoryCell()
         
         // Settings of searching bar
@@ -38,10 +37,10 @@ class RecipeListVC: UIViewController {
         searchController.searchBar.placeholder = "Buscar..."
         searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
-//        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.hidesSearchBarWhenScrolling = false
         
         btnSearch?.layer.cornerRadius = 10;
-
+        tableView.reloadData()
         // Do any additional setup after loading the view.
     }
 
@@ -61,20 +60,9 @@ class RecipeListVC: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: identifier)
     }
     
-    private func addContent() {
-        var rcts = Recipe(name: "newRecipe", backgoundImg: "https://gravatar.com/avatar/9fec86bd99f2be58ce3db2a7bbc624df?s=400&d=identicon&r=x", description: "description default")
-        recipes.append(rcts)
-        
-        rcts = Recipe(name: "newRecipe2", backgoundImg: "https://gravatar.com/avatar/9fec86bd99f2be58ce3db2a7bbc624df?s=400&d=identicon&r=x", description: "description default ")
-        recipes.append(rcts)
-        
-        rcts = Recipe(name: "newRecipe3", backgoundImg: "https://gravatar.com/avatar/9fec86bd99f2be58ce3db2a7bbc624df?s=400&d=identicon&r=x", description: "description default ")
-        recipes.append(rcts)
-    }
-    
     // navigation to recipleVC
     private func goRecipesDetails(_ recipe: Recipe) {
-        let RecipeCategory = RecipeVC()
+        let RecipeCategory = RecipeVC(recipe)
         navigationController?.pushViewController(RecipeCategory, animated: true)
     }
     
@@ -102,7 +90,12 @@ extension RecipeListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView (_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
-        return recipes.count
+        if isFiltering(){
+            return filteredRecipes.count
+        }else{
+            return recipes.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -111,7 +104,11 @@ extension RecipeListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView (_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
-        cell = createContactCellforIndexPath(indexPath) as RecipeCell
+        if isFiltering(){
+            cell = createContactSearchCellforIndexPath(indexPath) as RecipeCell
+        } else {
+            cell = createContactCellforIndexPath(indexPath) as RecipeCell
+        }
         return cell
     }
     
@@ -130,10 +127,23 @@ extension RecipeListVC: UITableViewDelegate, UITableViewDataSource {
         
         let recipe = recipes[indexPath.row]
         
-        cell.lblName.text = recipe.name
+        cell.txtDificult.text = recipe.dificult
+        cell.txtName.text = recipe.name
         cell.imgRecipe.sd_setImage(with: URL(string: recipe.backgoundImg!), placeholderImage: UIImage(named: "Recipe"), options: .cacheMemoryOnly, completed: nil)
         cell.txtfDescription.text = recipe.description
        
+        return cell
+    }
+    
+    func createContactSearchCellforIndexPath(_ indexPath: IndexPath) -> RecipeCell {
+        let cell: RecipeCell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
+
+        let recipe = filteredRecipes[indexPath.row]
+
+        cell.txtName.text = recipe.name
+        cell.imgRecipe.sd_setImage(with: URL(string: recipe.backgoundImg!), placeholderImage: UIImage(named: "Recipe"), options: .cacheMemoryOnly, completed: nil)
+        cell.txtfDescription.text = recipe.description
+
         return cell
     }
     
