@@ -12,8 +12,17 @@ class RecipeVC: UIViewController {
 
     @IBOutlet var txtTitle: UILabel?
     @IBOutlet var imgStart: UIImageView?
-    @IBOutlet var ingredientsTable: UITableView?
-    @IBOutlet var doneTable: UITableView?
+//    @IBOutlet var ingredientsTable: UITableView?
+//    @IBOutlet var doneTable: UITableView?
+    
+    internal var recipe: Recipe!
+    
+    convenience init(recipe: Recipe){
+        self.init()
+        self.recipe = recipe
+//        txtTitle = recipe.name
+//        txt
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

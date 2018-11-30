@@ -12,10 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeVC" customModule="RecipApp" customModuleProvider="target">
             <connections>
-                <outlet property="doneTable" destination="fwP-Ep-MWp" id="CeN-q6-a9b"/>
                 <outlet property="imgStart" destination="ZrH-7a-AsR" id="9Yp-pb-iyC"/>
-                <outlet property="ingredientsTable" destination="zYC-1w-eWD" id="jLJ-8s-b3u"/>
-                <outlet property="title" destination="TPb-l6-waq" id="WEv-4B-CAx"/>
+                <outlet property="txtTitle" destination="TPb-l6-waq" id="xHW-re-Fld"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,7 +33,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPb-l6-waq">
                             <rect key="frame" x="87" y="139" width="280" height="64"/>
-                            <color key="backgroundColor" red="0.057916738359999997" green="1" blue="0.95580502639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="WDi-d0-70h"/>
                             </constraints>
@@ -43,46 +41,15 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zYC-1w-eWD">
-                            <rect key="frame" x="20" y="224" width="335" height="269"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="269" id="xti-aQ-f5P"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="kUW-ao-P2C"/>
-                                <outlet property="delegate" destination="-1" id="2El-UG-FbM"/>
-                            </connections>
-                        </tableView>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fwP-Ep-MWp">
-                            <rect key="frame" x="10" y="530" width="357" height="129"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="129" id="38S-he-oL9"/>
-                                <constraint firstAttribute="height" constant="129" id="9d6-gw-2Hd"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="129" id="ndf-lo-xbZ"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="iOb-LK-ZLD"/>
-                                <outlet property="delegate" destination="-1" id="B8z-JB-9kO"/>
-                            </connections>
-                        </tableView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="fwP-Ep-MWp" secondAttribute="trailing" constant="8" id="0zt-cS-hm2"/>
-                        <constraint firstAttribute="bottom" secondItem="zYC-1w-eWD" secondAttribute="bottom" constant="174" id="3AE-Kd-mrq"/>
                         <constraint firstAttribute="trailing" secondItem="TPb-l6-waq" secondAttribute="trailing" constant="8" id="3UI-02-FXV"/>
                         <constraint firstAttribute="trailing" secondItem="ZrH-7a-AsR" secondAttribute="trailing" id="GPw-rS-3kI"/>
                         <constraint firstItem="ZrH-7a-AsR" firstAttribute="leading" secondItem="MD7-gI-bLq" secondAttribute="leading" id="HmQ-j5-Bdf"/>
                         <constraint firstItem="TPb-l6-waq" firstAttribute="leading" secondItem="MD7-gI-bLq" secondAttribute="leading" constant="87" id="Oy4-xa-Xlc"/>
-                        <constraint firstItem="fwP-Ep-MWp" firstAttribute="top" secondItem="zYC-1w-eWD" secondAttribute="bottom" constant="37" id="SUy-qU-deY"/>
-                        <constraint firstItem="ZrH-7a-AsR" firstAttribute="centerX" secondItem="zYC-1w-eWD" secondAttribute="centerX" id="Yb8-j8-RFc"/>
-                        <constraint firstItem="zYC-1w-eWD" firstAttribute="top" secondItem="ZrH-7a-AsR" secondAttribute="bottom" constant="37" id="Ywd-HC-tyb"/>
-                        <constraint firstItem="fwP-Ep-MWp" firstAttribute="leading" secondItem="MD7-gI-bLq" secondAttribute="leading" constant="10" id="daf-Bd-10c"/>
-                        <constraint firstItem="zYC-1w-eWD" firstAttribute="top" secondItem="TPb-l6-waq" secondAttribute="bottom" constant="21" id="gN4-R4-zQP"/>
-                        <constraint firstItem="zYC-1w-eWD" firstAttribute="leading" secondItem="MD7-gI-bLq" secondAttribute="leading" constant="20" id="hMO-Vf-ZyI"/>
+                        <constraint firstAttribute="bottom" secondItem="TPb-l6-waq" secondAttribute="bottom" constant="464" id="fiQ-hb-LpQ"/>
+                        <constraint firstItem="TPb-l6-waq" firstAttribute="top" secondItem="MD7-gI-bLq" secondAttribute="top" constant="139" id="foi-yX-pjF"/>
                         <constraint firstItem="ZrH-7a-AsR" firstAttribute="top" secondItem="MD7-gI-bLq" secondAttribute="top" id="nph-Dc-WEs"/>
-                        <constraint firstItem="fwP-Ep-MWp" firstAttribute="centerX" secondItem="MD7-gI-bLq" secondAttribute="centerX" constant="1" id="rom-cC-6Lz"/>
                         <constraint firstItem="ZrH-7a-AsR" firstAttribute="centerX" secondItem="MD7-gI-bLq" secondAttribute="centerX" id="vkA-EM-TNh"/>
                     </constraints>
                 </scrollView>

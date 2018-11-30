@@ -36,17 +36,7 @@ class CategoriesVC: UIViewController {
         
     }
     
-    private func addContent() {
-        var categ = Category(title: "newCateg", backgoundImg: "https://gravatar.com/avatar/9fec86bd99f2be58ce3db2a7bbc624df?s=400&d=identicon&r=x", numRecites: "2", description: "description default")
-        categories.append(categ)
-        
-        categ = Category(title: "newCateg2", backgoundImg: "https://gravatar.com/avatar/9fec86bd99f2be58ce3db2a7bbc624df?s=400&d=identicon&r=x", numRecites: "3", description: "description default ")
-        categories.append(categ)
-        
-        categ = Category(title: "newCateg2", backgoundImg: "https://gravatar.com/avatar/9fec86bd99f2be58ce3db2a7bbc624df?s=400&d=identicon&r=x", numRecites: "2", description: "description default ")
-        categories.append(categ)
-        
-    }
+    
     
     private func goRecipes(_ arrRecipe: [Recipe]) {
         let RecipeCategory = RecipeListVC()
