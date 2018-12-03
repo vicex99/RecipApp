@@ -16,8 +16,8 @@ class Recipe {
     var duration : String!
     var dificult : String!
     
-    var ingredients: [String]! = ["ajo", "cebolla", "piña", "pimiento"]
-    var elaboration: [String]! = ["primero cebolla", "despues pimiento y ajo", "para terminar la piña"]
+    var ingredients: [String]!
+    var elaboration: [String]!
     
     var coordenades: Location!
     

@@ -35,6 +35,11 @@ class RecipeVC: UIViewController {
         lblDifficult.text = recipe.dificult
         txtDesc.text = recipe.description
         
+//        // design diff, time and btn Map
+//        self.lblTime. = 5.0
+//        self.lblDifficult.layer.borderWidth = 5.0
+//        self.btnLocation.layer.borderWidth = 5.0
+        
         // To resize the textView
         self.txtDesc.translatesAutoresizingMaskIntoConstraints = true
         self.txtDesc.sizeToFit()
