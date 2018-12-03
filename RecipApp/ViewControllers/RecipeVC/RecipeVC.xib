@@ -57,7 +57,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OF-oD-haX">
-                            <rect key="frame" x="152" y="346" width="58" height="21"/>
+                            <rect key="frame" x="152" y="346" width="62" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -108,7 +108,7 @@
                         <constraint firstItem="ZrH-7a-AsR" firstAttribute="top" secondItem="MD7-gI-bLq" secondAttribute="top" id="Lvm-qn-lDf"/>
                         <constraint firstItem="ZrH-7a-AsR" firstAttribute="centerX" secondItem="MD7-gI-bLq" secondAttribute="centerX" id="NIi-aJ-4b8"/>
                         <constraint firstItem="ZrH-7a-AsR" firstAttribute="trailing" secondItem="DiN-Uc-YF4" secondAttribute="trailing" id="Nxa-VV-ERf"/>
-                        <constraint firstItem="9Xh-Vo-RdH" firstAttribute="leading" secondItem="2OF-oD-haX" secondAttribute="trailing" constant="58" id="OtP-vO-GQP"/>
+                        <constraint firstItem="9Xh-Vo-RdH" firstAttribute="leading" secondItem="2OF-oD-haX" secondAttribute="trailing" constant="54" id="OtP-vO-GQP"/>
                         <constraint firstItem="EYd-nb-rdb" firstAttribute="centerX" secondItem="bPi-hN-q8I" secondAttribute="centerX" id="Oxc-kn-lPF"/>
                         <constraint firstItem="bPi-hN-q8I" firstAttribute="centerX" secondItem="MD7-gI-bLq" secondAttribute="centerX" id="QhC-vG-Shj"/>
                         <constraint firstItem="EYd-nb-rdb" firstAttribute="leading" secondItem="MD7-gI-bLq" secondAttribute="leading" constant="12" id="SLh-5F-i0t"/>
