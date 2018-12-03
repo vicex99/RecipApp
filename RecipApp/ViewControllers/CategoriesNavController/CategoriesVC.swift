@@ -59,7 +59,7 @@ class CategoriesVC: UIViewController {
                                        dificult: "hard",
                                        location: Location(lat: 23.654,lon: 76.234)),
                                 
-                                Recipe(name: "Receta de Brochetas de solomillo y melón con ensalada de rúcula",
+                                Recipe(name: "Brochetas de solomillo y melón con ensalada de rúcula",
                                        backgoundImg: "https://static.hogarmania.com/archivos/201704/brocheta-editorial-1280x720x80xX.jpg",
                                        description: "Receta de brochetas de solomillo y melón con ensalada de rúcula por Karlos Arguiñano, una sabrosa forma de combinar diferentes sabores.",
                                        ingredients: ["2 solomillos de cerdo", "100 g de rúcula", "500 g de melón", "2 setas de primavera", "200 ml de vino Pedro Ximénez", "vinagre de Jerez", "aceite de oliva virgen extra", "sal", "pimienta", "perejil"],
@@ -76,7 +76,7 @@ class CategoriesVC: UIViewController {
                          backgoundImg: "https://png.pngtree.com/thumb_back/fw800/back_pic/03/56/22/15579ddddd82192.jpg",
                          description: "description default ",
                          recipes: [
-                            Recipe(name: "Receta de Anchoas al limón",
+                            Recipe(name: "Anchoas al limón",
                                    backgoundImg: "https://static.hogarmania.com/archivos/201805/karl6188-anchoas-al-limon-editorial-horizontal-1280x720x80xX.jpg",
                                    description: "receta de anchoas frescas al limón acompañadas de tostadas de pan.",
                                    ingredients: ["800 g de anchoas (frescas)", "1 barra de pan", "1 diente de ajo", "2 limones", "aceite de oliva virgen extra", "sal", "pimienta", "prejil"],
@@ -93,7 +93,7 @@ class CategoriesVC: UIViewController {
                          backgoundImg: "https://previews.123rf.com/images/vicushka/vicushka1602/vicushka160200084/52224422-variedad-de-ensaladas-y-decoraci%C3%B3n-sanos-ingredientes-en-el-fondo-r%C3%BAstico-luz-vista-desde-arriba-bandera-es.jpg",
                          description: "refrescantes ensaladas y deliciosas verduras salidas ",
                          recipes: [
-                            Recipe(name: "Receta de Brochetas de solomillo y melón con ensalada de rúcula",
+                            Recipe(name: "Brochetas de solomillo y melón con ensalada de rúcula",
                                    backgoundImg: "https://static.hogarmania.com/archivos/201704/brocheta-editorial-1280x720x80xX.jpg",
                                    description: "Receta de brochetas de solomillo y melón con ensalada de rúcula por Karlos Arguiñano, una sabrosa forma de combinar diferentes sabores.",
                                    ingredients: ["2 solomillos de cerdo", "100 g de rúcula", "500 g de melón", "2 setas de primavera", "200 ml de vino Pedro Ximénez", "vinagre de Jerez", "aceite de oliva virgen extra", "sal", "pimienta", "perejil"],
@@ -102,7 +102,7 @@ class CategoriesVC: UIViewController {
                                    dificult: "hard",
                                    location: Location(lat: 88.454,lon: 29.636)
                             ),
-                            Recipe(name: "Receta de Acelgas con anchoas y huevo escalfado",
+                            Recipe(name: "Acelgas con anchoas y huevo escalfado",
                                    backgoundImg: "https://static.hogarmania.com/archivos/201805/6182-1-acelgas-con-anchoas-y-huevo-escalfado-editorial-xl-1280x720x80xX.jpg",
                                    description: "receta de salteado de acelgas y anchoas, con puré de patata y huevo escalfado.",
                                    ingredients: ["1 k de acelgas", "4 patatas", "4 huevos", "4 anchoas en aceite", "2 dientes de ajo", "2 ajos frescos", "aceite de oliva virgen extra", "sal", "pimienta", "perejil"],

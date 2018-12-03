@@ -60,7 +60,7 @@ class RecipeVC: UIViewController {
         var allProgres: String = " \n PASOS \n"
         for step in recipe.elaboration {
             allProgres = allProgres + "\n · " +  step + "\n"
-            print("$allProgres")
+            
         }
 
         self.txtIngredients.text = self.txtIngredients.text + "\n" + allProgres
