@@ -84,6 +84,24 @@ class CategoriesVC: UIViewController {
                                 duration: "2h",
                                 dificult: "hard",
                                 location: Location(lat: 0.654,lon: 91.835)
+                            ),
+                            Recipe(name: "Corvina rebozada con salsa tártara y pimientos",
+                                   backgoundImg: "https://static.hogarmania.com/archivos/201811/corvina-rebozada-editorial-1280x720x80xX.jpg",
+                                   description: "Corvina rebozada con salsa tártara y pimientos",
+                                   ingredients: ["1 corvina", "2 pimientos morrones", "5 huevos", "½ cebolleta", "1 diente de ajo", "15 g de alcaparras", "3 pepinillos en vinagre", "1 cucharadita de mostaza de Dijon", "aceite de oliva virgen extra", "harina", "vinagre", "sal", "pimienta", "cebollino", "perejil"],
+                                   elaboration: ["Pon agua a calentar en una cazuela. Agrega 1 huevo y ponlo a cocer. Cuando lleve 10 minutos hirviendo, apaga el fuego. Refresca, pela y resérvalo.", "Pon otro huevo en un vaso de batidora, agrega un chorrito de vinagre y una pizca de sal. Añade 200 ml de aceite y tritura los ingredientes hasta que liguen. Pasa la mahonesa a un bol. Pica las alcaparras finamente y los pepinillos en daditos, y agrégalos a la mahonesa. Pica el huevo cocido, la cebolleta y el cebollino y añádelos. Agrega la mostaza, mezcla todos los ingredientes y reserva la salsa tártara.", "Pela los pimientos morrones, córtalos en tiras y fríelos en una sartén con aceite. Sazona.", "Retira la cabeza de la corvina, saca los lomos, retírales la piel y corta cada lomo en 2 trozos. Salpimienta y pásalos por harina y huevo batido.", "Pon a calentar una sartén con abundante aceite. Aplasta el diente de ajo (con piel) y agrégalo. Introduce también el pescado y fríelo por los dos lados. Retíralos a una fuente cubierta con papel absorbente.", "Sirve el pescado con la salsa tártara y los pimientos. Adorna con unas hojas de perejil."],
+                                   duration: "50min",
+                                   dificult: "simple",
+                                   location: Location(lat: 23.654,lon: 65.835)
+                            ),
+                            Recipe(name: "Borreta alicantina",
+                                   backgoundImg: "https://static.hogarmania.com/archivos/201810/borreta-alicantina-editorial-1280x720x80xX.jpg",
+                                   description: "¡muy apetecible en días de frío!",
+                                   ingredients: ["400 g de bacalao desalado", "4 huevos", "3 patatas", "½ k de espinacas", "1 cabeza de ajos", "1 l de agua", "2 ñoras", "1 cebolla", "aceite de oliva virgen extra", "sal"],
+                                   elaboration: ["Pon 1 l de agua a calentar en una cazuela grande. Pela las patatas, casca y agrégalas. Pela los dientes de ajo y añádelos. Pela la cebolla, córtala por la mitad e incorpórala. Corta también el bacalao (sin piel) en trozos grandes y mételo en la cazuela. Retira los tallos y las pepitas a las ñoras y añádelas. Finalmente, limpia las espinacas, pica e agrégalas. Sazona.", "Cuando empiece a hervir, vierte un chorrito de aceite y cocina todo a fuego medio (sin tapar) durante 30 minutos.", "Casca los huevos, agrégalos a la cazuela y sazónalos. Coloca la tapa y espera a que cuajen. Sirve."],
+                                   duration: "2h",
+                                   dificult: "hard",
+                                   location: Location(lat: 0.654,lon: 91.835)
                             )
             ]
         )
