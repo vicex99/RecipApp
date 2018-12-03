@@ -13,7 +13,8 @@ class RecipeVC: UIViewController {
     @IBOutlet var txtTitle: UITextView!
     @IBOutlet var imgStart: UIImageView!
     @IBOutlet var txtIngredients: UITextView!
-    @IBOutlet var txtSteps: UITextView!
+    
+    @IBOutlet var txtDesc: UITextView!
 
     @IBOutlet var lblDifficult: UILabel!
     @IBOutlet var lblTime: UILabel!
@@ -32,8 +33,14 @@ class RecipeVC: UIViewController {
         txtTitle.text = recipe.name
         lblTime.text = recipe.duration
         lblDifficult.text = recipe.dificult
+        txtDesc.text = recipe.description
+        
+        // To resize the textView
+        self.txtDesc.translatesAutoresizingMaskIntoConstraints = true
+        self.txtDesc.sizeToFit()
+        self.txtDesc.isScrollEnabled = false
+        
         setIngredients()
-        setProgress()
         imgStart.sd_setImage(with: URL(string: recipe.backgoundImg!), placeholderImage: UIImage(named: "Recipe"), options: .cacheMemoryOnly, completed: nil)
 
     }
@@ -43,25 +50,20 @@ class RecipeVC: UIViewController {
     }
  
     internal func setIngredients(){
-        var allingredients: String = ""
+        var allingredients: String = " INGREDIENTES \n"
         for ingr in recipe.ingredients {
-            allingredients = allingredients + "\n " +  ingr
+            allingredients = allingredients + "\n · " +  ingr + "\n"
         }
         
         self.txtIngredients.text = allingredients
         
-        self.txtIngredients.translatesAutoresizingMaskIntoConstraints = true
-        self.txtIngredients.sizeToFit()
-        self.txtIngredients.isScrollEnabled = false
-    }
-    
-    internal func setProgress(){
-        var allProgres: String = ""
+        var allProgres: String = " \n PASOS \n"
         for step in recipe.elaboration {
-            allProgres = allProgres + "\n " +  step
+            allProgres = allProgres + "\n · " +  step + "\n"
+            print("$allProgres")
         }
-        
-        self.txtIngredients.text = allProgres
+
+        self.txtIngredients.text = self.txtIngredients.text + "\n" + allProgres
         
         self.txtIngredients.translatesAutoresizingMaskIntoConstraints = true
         self.txtIngredients.sizeToFit()
